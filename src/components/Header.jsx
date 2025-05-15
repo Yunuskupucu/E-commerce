@@ -4,21 +4,10 @@ import '../css/Header.css';
 import { CiShoppingBasket } from 'react-icons/ci';
 import { CiLight } from 'react-icons/ci';
 import { FaMoon } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
-  // const [theme, setTheme] = useState(false);
-
-  // const changeTheme = () => {
-  //   const root = document.getElementById('root');
-  //   if (theme) {
-  //     root.style.backgroundColor = '#1D2A35';
-  //     root.style.color = '#fff';
-  //   } else {
-  //     root.style.backgroundColor = 'white';
-  //     root.style.color = 'black';
-  //   }
-  //   setTheme(!theme);
-  // };
+  const navigate = useNavigate();
 
   return (
     <div
@@ -29,7 +18,7 @@ function Header() {
         justifyContent: 'space-between',
       }}
     >
-      <div className="flex-row">
+      <div className="flex-row" onClick={() => navigate('/')}>
         <img className="logo" src={logo} />
         <p className="brand">E-COMMERCE</p>
       </div>

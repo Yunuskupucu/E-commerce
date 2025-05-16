@@ -1,10 +1,8 @@
-import React from 'react';
 import logo from '../images/logo.png';
 import '../css/Header.css';
 import { CiShoppingBasket } from 'react-icons/ci';
-import { CiLight } from 'react-icons/ci';
-import { FaMoon } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import Badge from '@mui/material/Badge';
 
 function Header() {
   const navigate = useNavigate();
@@ -29,12 +27,9 @@ function Header() {
           placeholder="Arama yapabilirsiniz"
         />
         <div>
-          {/* {theme ? (
-            <FaMoon className="icon" onClick={changeTheme} />
-          ) : (
-            <CiLight className="icon" onClick={changeTheme} />
-          )} */}
-          <CiShoppingBasket className="icon" />
+          <Badge badgeContent={4} color="primary">
+            <CiShoppingBasket className="icon" />
+          </Badge>
         </div>
       </div>
     </div>
